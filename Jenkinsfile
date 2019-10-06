@@ -1,22 +1,23 @@
 node {
-    stage('welcomex') {
-      sh 'echo welcomey'
-    }
 
     stage('rebuildApp') {
+      environment {
+        GOPATH = "frogs"
+      }
+    
       git(
         url: 'https://github.com/craigwongva/tinygo.git',
         branch: "master"
       )
-
-/*
+      
       sh """
 pwd # /var/lib/jenkins/workspace/src/tinygo
-echo $GOPATH
-go build ./pkg/main
+go get ./pkg/main
+/var/lib/jenkins/workspace/bin/main
+cd /var/lib/jenkins/workspace/src/tinygo
+ls
+../../golint ./...
+echo I just finished golint
 """
-*/
-      //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
-      sh 'go run pkg/main/main.go'
-    }
+ }
 }
