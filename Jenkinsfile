@@ -17,6 +17,6 @@ go build ./pkg/main
 """
 */
       //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
-      sh 'go run main.go'
+      sh 'go run pkg/main/main.go'
     }
 }
