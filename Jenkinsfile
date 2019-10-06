@@ -6,7 +6,7 @@
  */
 pipeline {
     agent {
-        label 'your-agent-goes-here'
+        label 'docker'
     }
     stages {
         stage('Your Build Stage Name Goes Here') {
