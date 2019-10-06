@@ -9,7 +9,7 @@ node {
         branch: "master"
       )
 
-//      withEnv([GOPATH="/var/lib/jenkins/workspace/src/tinygo"]) {
+      withEnv([GOPATH="/var/lib/jenkins/workspace/src/tinygo"]) {
 //            sh 'go version'
 /*
       sh """
@@ -18,7 +18,7 @@ echo $GOPATH
 go build ./pkg/main
 """
 */
-//     }
+     }
       //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
       //sh 'go run main.go'
     }
