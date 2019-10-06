@@ -3,13 +3,13 @@ node {
       sh 'echo welcomey'
     }
 
+    withEnv([GOPATH="/var/lib/jenkins/workspace/src/tinygo"]) {
     stage('rebuildApp') {
       git(
         url: 'https://github.com/craigwongva/tinygo.git',
         branch: "master"
       )
 
-      withEnv([GOPATH="/var/lib/jenkins/workspace/src/tinygo"]) {
 //            sh 'go version'
 /*
       sh """
@@ -19,7 +19,5 @@ go build ./pkg/main
 """
 */
      }
-      //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
-      //sh 'go run main.go'
     }
 }
