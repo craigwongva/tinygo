@@ -10,7 +10,7 @@ node {
       )
 
       sh 'pwd'
-      sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
-      sh '/usr/local/go/bin/go get'
+      //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
+      sh 'go run main.go'
     }
 }
