@@ -1,3 +1,14 @@
+pipeline {
+    agent { docker { image 'golang' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'go version'
+            }
+        }
+    }
+}
+/*
 node {
     stage('welcomex') {
       sh 'echo welcomey'
@@ -11,13 +22,14 @@ node {
       )
 
 //            sh 'go version'
-/*
+///
       sh """
 pwd # /var/lib/jenkins/workspace/src/tinygo
 echo $GOPATH
 go build ./pkg/main
 """
-*/
+///
      }
     }
 }
+*/
