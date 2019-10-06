@@ -11,6 +11,6 @@ node {
 
       sh 'pwd'
       //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
-      sh 'go run main.go'
+      //sh 'go run main.go'
     }
 }
