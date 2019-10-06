@@ -5,9 +5,9 @@
  * a webhook for push and pull request is needed from the Github repository to get builds to automatically start after a push.
  */
 pipeline {
-//    agent {
-//        label 'your-agent-goes-here'
-//    }
+    agent {
+        label 'your-agent-goes-here'
+    }
     stages {
         stage('Your Build Stage Name Goes Here') {
             steps {
