@@ -9,7 +9,9 @@ node {
         branch: "master"
       )
 
-      sh 'pwd'
+      sh """
+pwd # /var/lib/jenkins/workspace/src/tinygo
+"""
       //sh 'export GOPATH=/var/lib/jenkins/workspace/src/tinygo'
       //sh 'go run main.go'
     }
