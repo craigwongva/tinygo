@@ -12,12 +12,8 @@ node {
       
       sh """
 pwd # /var/lib/jenkins/workspace/src/tinygo
-go get ./pkg/main
-/var/lib/jenkins/workspace/bin/main
-cd /var/lib/jenkins/workspace/src/tinygo
-ls
-../../golint ./...
-echo I just finished golint
+echo $GOPATH
+go install ./pkg/tinygok
 """
  }
 }
